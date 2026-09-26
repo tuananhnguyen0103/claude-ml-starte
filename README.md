@@ -40,8 +40,8 @@ Nhiều bạn không có GPU ở nhà. Project này dạy cách làm việc chuy
 
 ```bash
 # 1. Lấy code
-git clone <URL-repo-này>
-cd claude-ml-starter
+git clone https://github.com/tuananhnguyen0103/claude-ml-starte.git
+cd claude-ml-starte
 
 # 2. Tạo môi trường Python (bản PyTorch CPU, nhẹ)
 python -m venv .venv
@@ -80,7 +80,7 @@ Sau khi mở `claude`, gõ thử:
 ## Train trên GPU
 
 **Cách A: Colab trên trình duyệt (khuyên dùng cho run dài).** Mở `notebooks/colab_train.ipynb` trên Colab
-(*File → Open notebook → GitHub*), sửa cell cấu hình (`GH_USER`, `REPO`, `RUN_NAME`) rồi *Run all*.
+(*File → Open notebook → GitHub*), sửa `RUN_NAME` trong cell cấu hình rồi *Run all* (repo public nên không cần token; fork thì đổi `GH_USER`).
 Bị ngắt phiên thì *Run all* lại với cùng `RUN_NAME`: script tự train tiếp từ checkpoint. Chi tiết: [docs/07](docs/07-colab-kaggle.md).
 
 **Cách B: Kaggle.** Import `notebooks/kaggle_train.ipynb`, bật GPU và Internet, rồi *Save & Run All*.

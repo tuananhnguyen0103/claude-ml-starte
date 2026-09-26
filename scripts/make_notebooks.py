@@ -47,8 +47,8 @@ COLAB = [
 
 **Bị ngắt phiên?** Kết nối lại rồi *Run all*, **giữ nguyên `RUN_NAME`**. Script tự train tiếp từ checkpoint trên Drive."""),
     ("code", '''# === Cấu hình (chỉ sửa cell này) ===
-GH_USER  = "<GH_USER>"
-REPO     = "<REPO>"
+GH_USER  = "tuananhnguyen0103"
+REPO     = "claude-ml-starte"
 REF      = "main"                # branch hoặc tag; run dài nên dùng tag do /prepare-train tạo
 RUN_NAME = "run-001-baseline"    # GIỮ NGUYÊN khi resume
 CONFIG   = "configs/base.yaml"
@@ -78,8 +78,8 @@ KAGGLE = [
 
 **Phiên sau (resume):** *Add Input → Your Work →* chọn Output của version trước, sửa `PREV_CKPT`, rồi Save & Run All lại."""),
     ("code", '''# === Cấu hình (chỉ sửa cell này) ===
-GH_USER   = "<GH_USER>"
-REPO      = "<REPO>"
+GH_USER   = "tuananhnguyen0103"   # fork thì đổi thành tài khoản của bạn
+REPO      = "claude-ml-starte"
 REF       = "main"
 RUN_NAME  = "run-001-baseline"   # GIỮ NGUYÊN khi resume
 CONFIG    = "configs/base.yaml"
