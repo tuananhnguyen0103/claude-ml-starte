@@ -1,0 +1,34 @@
+# Data & kết quả train (lưu trên Drive / Kaggle Output / HF Hub, không lên git)
+data/
+checkpoints/
+ckpt/
+outputs/
+runs/
+wandb/
+lightning_logs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.zip
+
+# Secrets
+.env
+.env.*
+kaggle.json
+*.pem
+
+# Claude Code: file cá nhân
+.claude/settings.local.json
+.claude/agent-memory-local/
+CLAUDE.local.md
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/

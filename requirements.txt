@@ -1,0 +1,2 @@
+# Cài trên Colab/Kaggle. KHÔNG ghi torch/torchvision: nền tảng đã có sẵn bản khớp CUDA, cài đè dễ lỗi.
+pyyaml>=6.0

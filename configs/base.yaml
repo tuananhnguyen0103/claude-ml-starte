@@ -1,0 +1,30 @@
+# Config baseline: SmallCNN trên CIFAR-10. Thí nghiệm mới = copy file này thành configs/exp_<tên>.yaml
+# (dùng /new-experiment). Không đổi train.epochs của một run đang resume: OneCycleLR phụ thuộc tổng số step.
+seed: 42
+
+data:
+  augment: true          # RandomCrop(32, pad 4) + HorizontalFlip
+  num_workers: 2
+  smoke_size: 64         # số ảnh giả khi chạy --smoke
+
+model:
+  name: small_cnn        # small_cnn | resnet18
+  width: 32
+  dropout: 0.2
+  num_classes: 10
+
+train:
+  epochs: 30
+  batch_size: 128
+  optimizer: sgd         # sgd | adamw
+  lr: 0.1                # max_lr của OneCycleLR
+  weight_decay: 5.0e-4
+  label_smoothing: 0.0
+  warmup_pct: 0.15
+  amp: true              # mixed precision, chỉ bật khi có GPU
+  log_every: 100
+  keep_last: 2           # số checkpoint step_*.pt giữ lại
+
+smoke:                   # ghi đè khi chạy --smoke (CPU, vài giây)
+  epochs: 2
+  batch_size: 16

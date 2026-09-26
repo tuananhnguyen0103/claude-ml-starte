@@ -1,0 +1,7 @@
+# Cài ở máy cá nhân (không cần GPU):
+#   python -m venv .venv
+#   Windows:      .venv\Scripts\python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   macOS/Linux:  .venv/bin/python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   rồi:          <python của .venv> -m pip install -r requirements-dev.txt
+-r requirements.txt
+pytest>=8.0
